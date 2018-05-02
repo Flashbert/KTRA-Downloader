@@ -43,12 +43,16 @@ if($From -and !$To) {
     Write-Output "Only To-Parameter is not a valid option."
 }
 
+if(!(Test-Path $Path)) {
+    Write-Output "$Path doesn't exist. Please provide an existing folder."
+    exit
+}
 
 do {
 
 $url = "http://www.djkutski.com/podcast/keepingtheravealive$From.mp3"
 $output = "$Path\keepingtheravealive$From.mp3"
-if($output) {
+if((Test-Path $output)) {
     Write-Output "Skipping episode $From, already existing"
 }
 else
@@ -62,4 +66,4 @@ else
 }
 $From = $From+1
 
-} while($From -eq $To)
+} while($From -le $To)
