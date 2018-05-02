@@ -3,10 +3,10 @@ Keeping the Rave Alive Downloader
 
 Easy download for Keepingtheravealive-Podcast
 
-.DESCRIPTION
-    This script downloads KeepingTheRaveAlive Podcast from the website.
-    You can either specify one episode or a row of episodes. If you do not
-    it will download the latest episode existing.
+        .DESCRIPTION
+            This script downloads KeepingTheRaveAlive Podcast from the website.
+            You can either specify one episode or a row of episodes. If you do not
+            it will download the latest episode existing.
 
         .PARAMETER From
             The episode number you want to start download
